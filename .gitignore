@@ -1,0 +1,4 @@
+# Ignoring all files non-important files
+*.exe
+*.txt
+*.env
