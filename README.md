@@ -6,17 +6,17 @@ Esse projeto tem como propósito criar um sistema, onde o cliente pode subir os 
 ---
 
 ## Sumário
-1. [Introdução](https://github.com/iagocbs/projeto-de-extensao-II/master/README.md#)
+1. [Introdução](https://github.com/iagocbs/projeto-de-extensao-II#1-introdu%C3%A7%C3%A3o)
     > Explicação do Projeto + Struct Usada
-2. [Arquivos Usados](https://github.com/iagocbs/projeto-de-extensao-II/master/README.md#)
+2. [Arquivos Usados](https://github.com/iagocbs/projeto-de-extensao-II#2-arquivos-usados)
     > Listagem de Cada Arquivo com o Uso Deles
-3. [Funções Principais](https://github.com/iagocbs/projeto-de-extensao-II/master/README.md#)
+3. [Funções Principais](https://github.com/iagocbs/projeto-de-extensao-II#3-fun%C3%A7%C3%B5es-principais)
     > Listagem das Funções de Cada Arquivo
-4. [Arquivos Txt Aceitos](https://github.com/iagocbs/projeto-de-extensao-II/master/README.md#)
+4. [Arquivos Txt Aceitos](https://github.com/iagocbs/projeto-de-extensao-II#4-arquivos-txt-aceitos)
     > Modelos de Arquivo Txt Aceitos
-5. [Arquivos Criados](https://github.com/iagocbs/projeto-de-extensao-II/master/README.md#)
+5. [Arquivos Criados](https://github.com/iagocbs/projeto-de-extensao-II#5-arquivos-criados)
     > Todos os Arquivos Criados pelo Programa
-6. [Créditos](https://github.com/iagocbs/projeto-de-extensao-II/master/README.md#)
+6. [Créditos](https://github.com/iagocbs/projeto-de-extensao-II#6-cr%C3%A9ditos)
     > Participantes do Projeto
 
 ---
@@ -109,7 +109,7 @@ void opcaoMenu(Dados *vet, int opc, int limite, int *fim) {
 
 Nesta função, fazemos a exibição de cada opção no menu, e depois é passado para função de opções que segue em cada situação mapeada.
 
--
+
 
 2. **Inserir Novo Lote**
 ```c
@@ -169,7 +169,7 @@ void insereLote(Dados *vet, int *limite) {
 Nesta função sendo um pouco mais complicada, ela vai basicamente puxar o nome do arquivo que o cliente digitar, o sistema vai tentar abrir o arquivo para leitura.
 Puxando o nome, e voltando ao início para puxar os dados de forma completa e adicionando no `dados.bin`, depois finalizando os arquivos abertos
 
--
+
 
 3. **Excluir Lote**
 
@@ -222,7 +222,7 @@ void excluirLote(Dados *vet, int limite) {
 
 Essa função apesar de grande, apenas tem como base, puxar o nome digitado ao cliente, comparando com o nome dos dados Vetor excluindo eles indiretamente, e depois salvando no novo `dados.bin`!
 
--
+
 
 4. **Somatoria do Mês (CSV)**
 
@@ -266,7 +266,7 @@ void somatoriaLoteCSV(Dados *vet) {
 
 Nesta função, fazemos a somatória da litragem adicionada dos meses iguais, e depois demonstramos na tela e criamos a planilha
 
--
+
 
 5. **Listagem de Doações (CSV)**
 
