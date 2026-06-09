@@ -73,7 +73,7 @@ void insereLote(Dados *vet, int *limite) {
 
     rewind(arquivo);
     
-    while(i < limite && fscanf(arquivo, "%d/%d/%d %lf", &vet[i].dia, &vet[i].mes, &vet[i].ano, &vet[i].litragem) == 4) {
+    while(i < *limite && fscanf(arquivo, "%d/%d/%d %lf", &vet[i].dia, &vet[i].mes, &vet[i].ano, &vet[i].litragem) == 4) {
         strcpy(vet[i].nome, data);
         fwrite(&vet[i], sizeof(Dados), 1, binario);
         i++;
