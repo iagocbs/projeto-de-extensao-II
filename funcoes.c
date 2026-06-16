@@ -43,9 +43,11 @@ void insereLote(Dados *vet, int *limite) {
     char valor[VET_LIM] = {0}; // 15 caracteres
     int i = 0, j = 0;
 
-    while(vet[i].dia != 0) {
+    while(i < *limite && vet[i].dia != 0) {
         i++;
     }
+    if(i == *limite) 
+        aumentaLimite(&vet, limite);
 
     input_s("Digite o nome do arquivo (Ex: 20_06_2026.txt): ", valor, NOME_TAM);
 
@@ -61,7 +63,7 @@ void insereLote(Dados *vet, int *limite) {
     binario = fopen("dados.bin", "ab");
 
     char delim[5] = "_.";
-    char *nome = strtok(valor, delim), data[15];
+    char *nome = strtok(valor, delim), data[11] = {0};
     strcpy(data, nome);
 
     while(j < 2) {
@@ -70,6 +72,7 @@ void insereLote(Dados *vet, int *limite) {
         strcat(data, nome);
         j++;
     }
+    strcpy(&data[10], "\0");
 
     rewind(arquivo);
     
@@ -158,10 +161,12 @@ void listarLoteCSV(Dados *vet) {
     fprintf(planilha, "Arquivo;Litragem;\n");
 
     printf("+---------------------------------+\n");
+    if(vet[i].dia == 0) {
+        printf("Nao existem valores no arquivo: dados.bin\n");
+    }
     while(i < limite && vet[i].dia != 0) {
         fprintf(planilha, "%s;%.2lf;\n", vet[i].nome, vet[i].litragem);        
-        printf("| Arquivo: %s | ", vet[i].nome);
-        printf("Litragem: %.2lf |\n", vet[i].litragem);
+        printf("| Arquivo: %s | Litragem: %.2lf |\n", vet[i].nome, vet[i].litragem);
         i++;
     }
     printf("+---------------------------------+\n");

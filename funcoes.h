@@ -5,13 +5,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#define VET_LIM 100
-#define NOME_TAM 16
+#define VET_LIM 10
+#define NOME_TAM 15
 #define MES_MAX 12
 
 // Struct de Dados
 typedef struct {
-    char nome[NOME_TAM];
+    char nome[NOME_TAM]; 
     int dia, mes, ano;
     double litragem;
 } Dados;

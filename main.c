@@ -2,12 +2,21 @@
 #include "arquivo.h"
 
 int main(int argc, char *argv[]) {
-    Dados vetor[VET_LIM] = {0};
+    Dados *vetor = malloc(sizeof(Dados) * VET_LIM);
     int fimLoop = 0, opcao = 0, limite = VET_LIM;
 
+    validarArquivo(argv[1], &opcao, &limite);
+    
+    if(limite > VET_LIM) {
+        aumentaLimite(&vetor, &limite);
+    }
+
     if(argv[1] != NULL) {
-        validarArquivo(argv[1], &opcao);
         puxarDados(vetor, argv[1], limite);
+    }
+
+    if(argv[1] == NULL) {
+        puxarDadosBin(vetor, limite);
     }
 
     while(fimLoop == 0) {
