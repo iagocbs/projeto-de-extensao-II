@@ -89,7 +89,7 @@ void puxarDadosBin(Dados *vet, int limite) {
     arquivo = fopen("dados.bin", "rb+");
 
     if(arquivo == NULL) {
-        printf("Nao possivel abrir o arquivo. Tente reiniciar o programa\n");
+        printf("Nao possivel abrir o arquivo. Tente reiniciar o programa ou siga sem o dados.bin\n");
         
         while(i < limite) {
             strcpy(vet[i].nome, "00/00/0000\0");
